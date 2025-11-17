@@ -6,6 +6,7 @@ from azure.storage.blob import BlobServiceClient
 import string, random
 from werkzeug.utils import secure_filename
 from flask import flash
+from config import Config
 
 blob_container = app.config['BLOB_CONTAINER']
 blob_service = BlobServiceClient(
