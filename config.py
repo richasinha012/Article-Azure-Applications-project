@@ -11,7 +11,7 @@ class Config(object):
           raise ValueError("Need to define BLOB_ACCOUNT environment variable")
     BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY')# or 'ENTER_BLOB_STORAGE_KEY'
     if not  BLOB_STORAGE_KEY :
-          raise ValueError("Need to define  BLOB_STORAGE_KEY environment variable")
+          raise ValueError("Need to define  BLOB_STORAGE_KEY environment variable") 
     BLOB_CONTAINER = os.environ.get('BLOB_CONTAINER') #or 'ENTER_IMAGES_CONTAINER_NAME'
     if not BLOB_CONTAINER:
           raise ValueError("Need to define BLOB_CONTAINER environment variable")
