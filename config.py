@@ -36,7 +36,7 @@ class Config(object):
     + SQL_DATABASE
     + "?driver=ODBC+Driver+17+for+SQL+Server")
     #SQLALCHEMY_DATABASE_URI = 'mssql+pyodbc://' + SQL_USER_NAME + '@' + SQL_SERVER + ':' + SQL_PASSWORD + '@' + SQL_SERVER + ':1433/' + SQL_DATABASE  + '?driver=ODBC+Driver+17+for+SQL+Server'
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    #SQLALCHEMY_TRACK_MODIFICATIONS = False
     TENANT_NAME=os.environ.get('TENANT_NAME') #or 'ENTER_YOUR_TENANT_NAME_HERE'
     if not TENANT_NAME:
           raise ValueError("Need to define TENANT_NAME environment variable")
