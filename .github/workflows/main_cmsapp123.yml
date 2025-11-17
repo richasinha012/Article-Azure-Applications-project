@@ -63,4 +63,4 @@ jobs:
         with:
           app-name: 'cmsapp123'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3C5230598F9D4F2AAABC418008F319CC }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_82291BCD293B452EBAB056BD5725F2A6 }}
