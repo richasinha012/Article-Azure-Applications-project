@@ -14,7 +14,7 @@ app.config.from_object(Config)
 # TODO: Add any logging levels and handlers with app.logger
 # ---------------------------------------------------------
 # Configure application logging
-logger = logging.getLogger('werkzeug')  # or any name
+#logger = logging.getLogger('werkzeug')  # or any name
 app.logger.setLevel(logging.INFO)
 
 # Create a handler to output logs to console (Azure reads stdout)
