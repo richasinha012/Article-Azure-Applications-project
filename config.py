@@ -28,14 +28,14 @@ class Config(object):
     if not SQL_PASSWORD:
           raise ValueError("Need to define SQL_PASSWORD environment variable")
     # Below URI may need some adjustments for driver version, based on your OS, if running locally
-    '''SQLALCHEMY_DATABASE_URI = (
+    SQLALCHEMY_DATABASE_URI = (
     "mssql+pyodbc://"
     + SQL_USER_NAME + ":"
     + SQL_PASSWORD + "@"
     + SQL_SERVER + ".database.windows.net:1433/"
     + SQL_DATABASE
     + "?driver=ODBC+Driver+17+for+SQL+Server"
-)'''
+)
     SQLALCHEMY_DATABASE_URI = 'mssql+pyodbc://' + SQL_USER_NAME + '@' + SQL_SERVER + ':' + SQL_PASSWORD + '@' + SQL_SERVER + ':1433/' + SQL_DATABASE  + '?driver=ODBC+Driver+17+for+SQL+Server'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     TENANT_NAME=os.environ.get('TENANT_NAME') #or 'ENTER_YOUR_TENANT_NAME_HERE'
