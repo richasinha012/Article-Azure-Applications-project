@@ -96,7 +96,7 @@ def authorized():
         except Exception as e:
             current_app.logger.error(f"MSAL token acquisition exception: {e}")
             return render_template("auth_error.html", result={"error": "token_acquire_exception", "error_description": str(e)})
-        result = None
+        
         if "error" in result:
             return render_template("auth_error.html", result=result)
         session["user"] = result.get("id_token_claims")
@@ -133,8 +133,9 @@ def _load_cache():
     
 
 def _save_cache(cache):
+    
     # TODO: Save the cache, if it has changed
-     if cache and cache.has_state_changed:
+    if cache and cache.has_state_changed:
         session["token_cache"] = cache.serialize()
      
 
